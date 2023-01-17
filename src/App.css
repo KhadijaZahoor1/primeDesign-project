@@ -1,38 +1,320 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*  poppins fonts google  */
+@import url("https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,300&display=swap");
+
+/*  */
+@import url("https://p.typekit.net/p.css?s=1&k=rvf6pwc&ht=tk&f=43729.43730.43731.43732.43737.43738&a=93411264&app=typekit&e=css");
+
+@font-face {
+  font-family: "quiche-sans";
+  src: url("https://use.typekit.net/af/fef10c/00000000000000007735cacb/30/l?subset_id=2&fvd=n1&v=3") format("woff2"),
+    url("https://use.typekit.net/af/fef10c/00000000000000007735cacb/30/d?subset_id=2&fvd=n1&v=3") format("woff"),
+    url("https://use.typekit.net/af/fef10c/00000000000000007735cacb/30/a?subset_id=2&fvd=n1&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-stretch: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "quiche-sans";
+  src: url("https://use.typekit.net/af/435ae3/00000000000000007735cad2/30/l?subset_id=2&fvd=i1&v=3") format("woff2"),
+    url("https://use.typekit.net/af/435ae3/00000000000000007735cad2/30/d?subset_id=2&fvd=i1&v=3") format("woff"),
+    url("https://use.typekit.net/af/435ae3/00000000000000007735cad2/30/a?subset_id=2&fvd=i1&v=3") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 100;
+  font-stretch: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "quiche-sans";
+  src: url("https://use.typekit.net/af/46d891/00000000000000007735cacd/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/46d891/00000000000000007735cacd/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/46d891/00000000000000007735cacd/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@font-face {
+  font-family: "quiche-sans";
+  src: url("https://use.typekit.net/af/5f2a2b/00000000000000007735cad1/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/5f2a2b/00000000000000007735cad1/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/5f2a2b/00000000000000007735cad1/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 300;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "quiche-sans";
+  src: url("https://use.typekit.net/af/c7c5f3/00000000000000007735cae0/30/l?subset_id=2&fvd=n7&v=3") format("woff2"),
+    url("https://use.typekit.net/af/c7c5f3/00000000000000007735cae0/30/d?subset_id=2&fvd=n7&v=3") format("woff"),
+    url("https://use.typekit.net/af/c7c5f3/00000000000000007735cae0/30/a?subset_id=2&fvd=n7&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "quiche-sans";
+  src: url("https://use.typekit.net/af/6c2785/00000000000000007735cae2/30/l?subset_id=2&fvd=i7&v=3") format("woff2"),
+    url("https://use.typekit.net/af/6c2785/00000000000000007735cae2/30/d?subset_id=2&fvd=i7&v=3") format("woff"),
+    url("https://use.typekit.net/af/6c2785/00000000000000007735cae2/30/a?subset_id=2&fvd=i7&v=3") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+.bg2Clrs {
+  background: linear-gradient(to bottom, #fafafa 0%, #fafafa 54.1%, #0d1d2c 50%, #0d1d2c 100%);
+}
+
+.bg2ClrsWithWhite {
+  background: linear-gradient(to bottom, #ffff 0%, #ffff 54.1%, #0d1d2c 50%, #0d1d2c 100%);
+}
+
+.navbarPopup {
+  opacity: 1;
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+}
+.hoverEffect:hover {
+  color: aquamarine !important;
+  box-shadow: 0px 20px 40px rgb(0 0 0 / 30%);
+  border: 0 !important;
+  background: linear-gradient(180deg, #0d1d2c 0%, #0d1d2c99 100%) 0% 0% no-repeat padding-box,
+    url(https://d33om22pidobo4.cloudfront.net/blogs/covers/1webp-b3612d48-50c6-4956-a856-0897ff449df0.webp) !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  transition: all 0.3s ease;
+}
+.btnDisplay {
+  position: absolute;
+  top: 75%;
+  right: 10%;
+}
+.hoverEffect:hover button {
+  display: block;
+}
+.hoverEffect:hover p,
+.hoverEffect:hover h3 {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.effect li:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
 }
-
-@keyframes App-logo-spin {
+.effect li:hover:after {
+  width: 100%;
+  background: #0d1d2c;
+}
+.effect li:first-child::after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.effect li:first-child:hover::after {
+  width: 100%;
+  background: #ca8342;
+}
+.slider-tran {
+  transition: 750ms all ease-in-out;
+}
+@keyframes fade {
   from {
-    transform: rotate(0deg);
+    opacity: 0.4;
   }
+
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
+.checkboxEdit {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxEdit input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 0.5px solid #edf0f2;
+}
+.checkmark:hover {
+  background-color: transparent;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxEdit:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkboxEdit input:checked ~ .checkmark {
+  background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxEdit input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxEdit .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.pic {
+  margin: 50px; /* demo spacing */
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+}
+.arrow-down {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #737373;
+}
+
+select.minimal {
+  background-image: linear-gradient(45deg, transparent 50%, #b4b9be 50%),
+    linear-gradient(135deg, #b4b9be 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+  background-repeat: no-repeat;
+}
+
+/* media query */
+
+@media screen and (min-width: 768px) {
+  .bg2Clrs {
+    background: linear-gradient(to bottom, #fafafa 0%, #fafafa 35%, #0d1d2c 35%, #0d1d2c 100%);
+  }
+}
+
+/* .hamburger-toggler {
+  z-index: 9999;
+  position: absolute;
+}
+.hamburger-toggler {
+  padding: 15px 0;
+}
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger-toggler .hamburger-box {
+  overflow: hidden;
+  height: 30px;
+  width: 40px;
+   
+    display: inline-block;
+    position: relative;
+}
+.hamburger-toggler .hamburger-inner {
+  height: 1px;
+}
+.hamburger-toggler .hamburger-inner {
+  background-color: #fff;
+
+  border-radius: 2px;
+}
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+
+.pic1 {
+  background-image: url("./assets/images/dataexchange.png");
+}
+.pic2 {
+  background-image: url("./assets/images/nad.jpg");
+}
+ */
